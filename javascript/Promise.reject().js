@@ -1,11 +1,11 @@
-// Promise ko manually reject kiya
-// "Something Went Wrong" error message hai
+// Manually reject a Promise
+// "Something Went Wrong" is the rejection message
 Promise.reject("Something Went Wrong")
 
-// Agar Promise reject hota hai,
-// to .catch() automatically execute hota hai
+// If the Promise is rejected,
+// .catch() will automatically execute
 .catch((error) => {
 
-    // Reject hua hua error yahan "error" variable me milega
+    // The rejected error is received in the "error" variable
     console.log(error);
 });
