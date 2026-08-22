@@ -1,11 +1,11 @@
-// Ek Promise ko successfully resolve kiya
-// "Hello JavaScript" is Promise ki value hai
+// Successfully resolve a Promise
+// "Hello JavaScript" is the value of the Promise
 Promise.resolve("Hello JavaScript")
 
-// Promise successfully resolve hone ke baad
-// .then() automatically execute hoga
+// After the Promise is successfully resolved,
+// .then() will automatically execute
 .then((result) => {
 
-    // Resolved value "result" variable me milegi
+    // The resolved value is received in the "result" variable
     console.log(result);
 });
