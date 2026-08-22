@@ -1,26 +1,26 @@
 const p1 = Promise.resolve("HTML");
-// Promise.resolve() ek fulfilled Promise banata hai
-// Is Promise ki value "HTML" hai
+// Promise.resolve() creates a fulfilled Promise
+// The value of this Promise is "HTML"
 
 const p2 = Promise.resolve("CSS");
-// Ek fulfilled Promise banaya
-// Iski value "CSS" hai
+// Creates another fulfilled Promise
+// The value of this Promise is "CSS"
 
 const p3 = Promise.resolve("JavaScript");
-// Ek fulfilled Promise banaya
-// Iski value "JavaScript" hai
+// Creates another fulfilled Promise
+// The value of this Promise is "JavaScript"
 
 
-// Promise.all() teeno Promises ke complete hone ka wait karta hai
+// Promise.all() waits for all three Promises to complete
 Promise.all([p1, p2, p3])
 
     .then((result) => {
-        // Teeno Promises ki values ek array mein milengi
+        // The values of all three Promises are returned in an array
         console.log(result);
     })
 
     .catch((error) => {
-        // Agar koi Promise reject/fail ho jaye,
-        // to catch() error ko handle karega
+        // If any Promise is rejected or fails,
+        // catch() handles the error
         console.log(error);
     });
