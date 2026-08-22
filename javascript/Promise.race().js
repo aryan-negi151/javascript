@@ -1,39 +1,37 @@
-// Promise 1 banaya
+// Create Promise 1
 const p1 = new Promise((resolve) => {
 
-    // 3000 milliseconds = 3 seconds wait karega
+    // Wait for 3000 milliseconds = 3 seconds
     setTimeout(() => {
 
-        // 3 seconds baad Promise resolve hoga
+        // The Promise will resolve after 3 seconds
         resolve("First");
 
     }, 3000);
 });
 
 
-// Promise 2 banaya
+// Create Promise 2
 const p2 = new Promise((resolve) => {
 
-    // 1000 milliseconds = 1 second wait karega
+    // Wait for 1000 milliseconds = 1 second
     setTimeout(() => {
 
-        // 1 second baad Promise resolve hoga
+        // The Promise will resolve after 1 second
         resolve("Second");
 
     }, 1000);
 });
 
 
-// Promise.race() dono Promises me race karayega
-// Jo Promise SABSE PEHLE settle hoga,
-// uska result return karega
+// Promise.race() creates a race between both Promises
+// It returns the result of the Promise that settles FIRST
 Promise.race([p1, p2])
 
 
-// Jo Promise pehle complete hoga,
-// uski value result me milegi
+// The result of the first settled Promise is received here
 .then((result) => {
 
-    // Result console me print hoga
+    // Print the result to the console
     console.log(result);
 });
