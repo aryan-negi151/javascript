@@ -1,46 +1,40 @@
-// Promise 1 banaya
-// Ye immediately reject hoga
+// Create Promise 1
+// This Promise will be rejected immediately
 const p1 = Promise.reject("Error 1");
 
-
-// Promise 2 banaya
-// Ye 2 seconds ke baad resolve hoga
+// Create Promise 2
+// This Promise will resolve after 2 seconds
 const p2 = new Promise((resolve) => {
 
     // 2000 milliseconds = 2 seconds
     setTimeout(() => {
 
-        // 2 seconds baad Promise successful hoga
+        // After 2 seconds, the Promise will be successfully resolved
         resolve("Success");
 
     }, 2000);
 });
 
-
-// Promise 3 banaya
-// Ye bhi immediately reject hoga
+// Create Promise 3
+// This Promise will also be rejected immediately
 const p3 = Promise.reject("Error 3");
 
-
-// Promise.any() ka use kiya
-// Ye promises me se jo PEHLA successfully resolve hoga,
-// uska result return karega
+// Use Promise.any()
+// It returns the result of the first Promise that successfully resolves
 Promise.any([p1, p2, p3])
 
-
-// Jab koi ek Promise successfully resolve ho jayega,
-// .then() execute hoga
+// When any one Promise successfully resolves,
+// .then() will be executed
 .then((result) => {
 
-    // Successful Promise ki value print hogi
+    // Print the value of the successful Promise
     console.log(result);
 })
 
-
-// Agar SABHI Promises reject ho jayein,
-// tab .catch() execute hoga
+// If ALL Promises are rejected,
+// .catch() will be executed
 .catch((error) => {
 
-    // Error print hoga
+    // Print the error
     console.log(error);
 });
