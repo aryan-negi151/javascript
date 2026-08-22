@@ -1,18 +1,18 @@
-// Ek naya Promise create kiya
+// Create a new Promise
 let promise = new Promise((resolve, reject) => {
 
-    // Promise ko successfully resolve kar diya
-    // "Success" iska result/value hai
+    // Successfully resolve the Promise
+    // "Success" is the result/value of the Promise
     resolve("Success");
 
 });
 
 
-// Promise successful hone ke baad
-// .then() automatically execute hoga
+// After the Promise is successfully resolved,
+// .then() will automatically execute
 promise.then((result) => {
 
-    // Resolved value "result" variable me milegi
+    // The resolved value is received in the "result" variable
     console.log(result);
 
 });
