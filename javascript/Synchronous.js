@@ -1,11 +1,9 @@
-// Sabse pehle "Start" console me print hoga
+// First, "Start" will be printed to the console
 console.log("Start");
 
-
-// Uske baad ye line execute hogi
-// "Learning JavaScript" console me print hoga
+// Then, this line will execute
+// "Learning JavaScript" will be printed to the console
 console.log("Learning JavaScript");
 
-
-// Sabse last me "End" console me print hoga
+// Finally, "End" will be printed to the console
 console.log("End");
