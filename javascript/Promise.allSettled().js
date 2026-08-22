@@ -1,23 +1,23 @@
-// Promise 1 create kiya
-// Ye Promise successfully resolve hoga
+// Create Promise 1
+// This Promise will be successfully resolved
 const p1 = Promise.resolve("Success");
 
-// Promise 2 create kiya
-// Ye Promise reject hoga
+// Create Promise 2
+// This Promise will be rejected
 const p2 = Promise.reject("Error");
 
-// Promise 3 create kiya
-// Ye Promise successfully resolve hoga
+// Create Promise 3
+// This Promise will be successfully resolved
 const p3 = Promise.resolve("Done");
 
-// Promise.allSettled() sabhi Promises ka result check karta hai
-// Chahe koi Promise resolve ho ya reject, ye sabka result return karega
+// Promise.allSettled() waits for all Promises to settle
+// It returns the result of every Promise, whether resolved or rejected
 Promise.allSettled([p1, p2, p3])
 
-// Jab teeno Promises settle ho jayenge,
-// .then() ke andar result aa jayega
+// When all three Promises are settled,
+// the results are received inside .then()
 .then((result) => {
 
-    // Sabhi Promises ka result console me print hoga
+    // Print the results of all Promises to the console
     console.log(result);
 });
